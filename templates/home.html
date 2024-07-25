@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="background-color:Sienna;">
+<body>
+<head>
+	
+	<title>Chords board!</title>
+
+
+<head>
+</head>
+</head>
+<body>
+
+
+
+
+<h1>Share your music<3 Start playing now!</h1>
+<h2>Upload a note!</h2>
+
+<form id="textInputForm" action="/home" method="POST">
+        <label for="note">Note:</label>
+        <input type="text" id="note" name="note">
+        <button type="button" onclick="addNote()">Post note</button>
+    </form>
+
+    <div id="displayArea">
+       
+    </div>
+
+    <script>
+        function addNote() {
+            var userInput = document.getElementById("note").value;
+            if (userInput.trim() !== "") {
+                var displayArea = document.getElementById("displayArea");
+                displayArea.innerHTML += "<p>Note: " + userInput + "</p>";
+                document.getElementById("note").value = ""; 
+            }
+        }
+    </script>
+
+<br>
+
+<form action="/signout" method="post">
+    <button type="submit">Sign out</button>
+</form>
+
+
+</body>
+
+</html>
